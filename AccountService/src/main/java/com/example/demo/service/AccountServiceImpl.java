@@ -66,6 +66,7 @@ public class AccountServiceImpl implements AccountService {
 			String response = restTemplate.postForObject("http://localhost:8082/transactions/save", transaction,
 					String.class);
 			System.out.println("....." + response);
+			System.out.println("AMount withdraw");
 			return newBalance;
 		} else
 			throw new InsufficientBalance("Insuffcient Balance To Withdraw...");
